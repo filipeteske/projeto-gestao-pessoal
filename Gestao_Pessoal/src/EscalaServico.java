@@ -8,25 +8,53 @@
  * @author aluno
  */
 public class EscalaServico {
-    private int idEscala;
+    private int id;
     private String data;
     private String turno;
+
     private Bombeiro bombeiro;
 
-    public EscalaServico(int idEscala, String data,
+    public EscalaServico() {
+    }
+
+    public EscalaServico(int id, String data,
                          String turno, Bombeiro bombeiro) {
 
-        this.idEscala = idEscala;
+        this.id = id;
         this.data = data;
         this.turno = turno;
         this.bombeiro = bombeiro;
     }
 
-    public void mostrarEscala() {
+    public int getId() {
+        return id;
+    }
 
-        System.out.println("===== ESCALA DE SERVIÇO =====");
-        System.out.println("Data: " + data);
-        System.out.println("Turno: " + turno);
-        System.out.println("Bombeiro: " + bombeiro.getNome());
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
+    }
+
+    public String getTurno() {
+        return turno;
+    }
+
+    public void setTurno(String turno) {
+        this.turno = turno;
+    }
+
+    public Bombeiro getBombeiro() {
+        return bombeiro;
+    }
+
+    public void setBombeiro(Bombeiro bombeiro) {
+        this.bombeiro = bombeiro;
     }
 }
